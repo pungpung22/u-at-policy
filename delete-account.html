@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계정 삭제 안내 - WOO-AT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.8;
+        }
+        .header {
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .warning-card {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe0e6 100%);
+            border: 2px solid #ec4899;
+        }
+        h2 {
+            color: #ec4899;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        h3 {
+            color: #333;
+            margin: 20px 0 10px;
+            font-size: 17px;
+        }
+        p, li {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .warning-text {
+            color: #ec4899;
+            font-weight: bold;
+        }
+        .email-link {
+            color: #ec4899;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #ec4899;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .data-list {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        .data-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .data-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>계정 삭제 안내</h1>
+        <p>WOO-AT - 커플 가계부</p>
+    </div>
+
+    <div class="container">
+        <div class="card warning-card">
+            <h2>⚠️ 삭제 전 꼭 확인하세요</h2>
+            <p class="warning-text">계정을 삭제하면 모든 데이터가 영구적으로 삭제되며, 복구할 수 없습니다.</p>
+            <p>등록하신 지출 내역, 예산 설정, 고정지출, 커플 연결 정보 등 모든 정보가 사라집니다. 신중하게 결정해 주세요.</p>
+        </div>
+
+        <div class="card">
+            <h2>📱 앱에서 삭제하기</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">앱 실행</div>
+                    <p>WOO-AT 앱을 실행합니다.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">설정 메뉴 이동</div>
+                    <p>하단 메뉴에서 설정(⚙️)을 탭합니다.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">계정 삭제 선택</div>
+                    <p>설정 메뉴 하단의 "계정 삭제 안내"를 탭하거나 로그아웃 후 계정을 삭제합니다.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">삭제 확인</div>
+                    <p>안내 메시지를 확인하고 "삭제" 버튼을 탭하면 계정이 즉시 삭제됩니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📧 이메일로 삭제 요청하기</h2>
+            <p>앱에서 삭제가 어려운 경우, 이메일로 요청하실 수 있습니다.</p>
+            <ul>
+                <li>수신: <a href="mailto:pung0805@gmail.com" class="email-link">pung0805@gmail.com</a></li>
+                <li>제목: [WOO-AT] 계정 삭제 요청</li>
+                <li>내용: 가입하신 이메일 주소를 포함해 주세요</li>
+            </ul>
+            <p>요청 확인 후 <strong>영업일 기준 3일 이내</strong>에 처리됩니다.</p>
+        </div>
+
+        <div class="card">
+            <h2>🗑️ 삭제되는 데이터</h2>
+            <p>계정 삭제 시 다음 데이터가 모두 영구 삭제됩니다:</p>
+            <ul class="data-list">
+                <li>👤 회원 정보 (이메일, 이름, 프로필 사진)</li>
+                <li>💰 등록한 모든 지출 내역</li>
+                <li>📊 예산 설정 정보</li>
+                <li>🔄 고정지출 정보</li>
+                <li>💕 커플 연결 정보</li>
+                <li>📂 카테고리 및 결제수단 설정</li>
+                <li>💾 모든 서비스 이용 기록</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>❓ 자주 묻는 질문</h2>
+
+            <h3>Q. 삭제 후 같은 계정으로 다시 가입할 수 있나요?</h3>
+            <p>네, 가능합니다. 다만 이전 데이터는 복구되지 않으며 새로운 회원으로 가입됩니다.</p>
+
+            <h3>Q. 삭제 후 데이터 복구가 가능한가요?</h3>
+            <p>아니요, 삭제된 데이터는 어떠한 경우에도 복구할 수 없습니다.</p>
+
+            <h3>Q. 삭제 처리는 얼마나 걸리나요?</h3>
+            <p>앱 내 삭제는 즉시 처리됩니다. 이메일 요청 시 영업일 기준 3일 이내에 처리됩니다.</p>
+
+            <h3>Q. 커플 연결된 상대방의 데이터도 삭제되나요?</h3>
+            <p>아니요, 상대방의 데이터는 유지됩니다. 커플 연결만 해제됩니다.</p>
+        </div>
+
+        <div class="card">
+            <h2>📞 문의</h2>
+            <p>계정 삭제와 관련하여 궁금한 점이 있으시면 언제든 문의해 주세요.</p>
+            <ul>
+                <li>운영자: 풍풍스튜디</li>
+                <li>이메일: <a href="mailto:pung0805@gmail.com" class="email-link">pung0805@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <p style="text-align: center;">
+            <a href="privacy.html" class="back-link">← 개인정보처리방침 보기</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="index.html" class="back-link">메인으로 돌아가기</a>
+        </p>
+    </div>
+</body>
+</html>
