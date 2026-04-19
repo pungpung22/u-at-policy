@@ -81,6 +81,19 @@
     </div>
 
     <div class="container">
+        <div class="card" style="background:#FDF2F8; border:1px solid #FBCFE8;">
+            <h2>📊 Google Play 데이터 보안 요약</h2>
+            <p>Google Play Console의 "데이터 보안(Data Safety)" 양식과 1:1로 매핑되는 요약입니다.</p>
+            <ul>
+                <li><strong>수집:</strong> 이메일, 이름, 프로필 사진, 지출 내역, 예산 설정, 커플 연결 정보, 광고 ID, IP, 기기 정보</li>
+                <li><strong>공유:</strong> 커플 연결 기능 사용 시 연결된 파트너에게 지출 데이터 공유 (사용자의 명시적 동의 기반) / 광고 ID·IP → Google AdMob</li>
+                <li><strong>데이터 판매(Sell): 없음</strong></li>
+                <li><strong>전송 구간 암호화:</strong> HTTPS/TLS 1.2 이상</li>
+                <li><strong>데이터 삭제 요청:</strong> 앱 내 <strong>[설정 → 계정 삭제]</strong> 또는 <a href="mailto:pung0805@gmail.com" style="color:#ec4899;">pung0805@gmail.com</a></li>
+                <li><strong>대상 연령:</strong> 만 13세 이상 일반 이용자 (커플 가계부 앱, Google Play Families 정책 비대상)</li>
+            </ul>
+        </div>
+
         <div class="card">
             <h2>1. 개인정보의 수집 및 이용 목적</h2>
             <p>풍풍스튜디(이하 "운영자")가 제공하는 WOO-AT(이하 "앱")는 다음의 목적을 위해 개인정보를 수집 및 이용합니다:</p>
@@ -105,6 +118,22 @@
                 <li>커플 연결 정보</li>
                 <li>기념일 정보</li>
                 <li>앱 설정 정보</li>
+            </ul>
+
+            <h3>제3자 SDK가 자동 수집하는 정보</h3>
+            <ul>
+                <li><strong>Google AdMob:</strong> 광고 식별자(AAID/IDFA), IP 주소, 기기 정보, 앱 사용 이벤트</li>
+                <li><strong>Google Firebase (Auth/Firestore):</strong> 세션 토큰, 접속 IP, User-Agent — 인증 및 데이터 저장·동기화</li>
+            </ul>
+
+            <h3>수집하지 않는 정보 (최소 수집 원칙)</h3>
+            <ul>
+                <li><strong>민감정보:</strong> 주민등록번호, 신용카드 번호, 계좌번호, 생체정보, 건강·종교·정치 정보 <span style="font-size:13px; color:#666;">(지출 내역의 금액은 입력되나 카드번호·계좌 등 금융 식별자는 수집하지 않음)</span></li>
+                <li><strong>통신 데이터:</strong> 전화번호, SMS, 통화 기록, 연락처(주소록)</li>
+                <li><strong>하드웨어 식별자:</strong> IMEI, MAC 주소, 시리얼 번호 (Google의 재설정 가능한 광고 ID만 사용)</li>
+                <li><strong>정밀 위치:</strong> GPS, Wi-Fi 기반 정밀 위치</li>
+                <li><strong>기기 내 파일:</strong> 갤러리 사진 스캔, 다운로드 폴더, 타 앱 데이터, 설치된 앱 목록</li>
+                <li><strong>실시간 입력:</strong> 마이크, 카메라, 키 입력, 화면 캡처</li>
             </ul>
         </div>
 
@@ -134,7 +163,15 @@
                 <li>기기 정보 및 IP 주소</li>
                 <li>앱 사용 기록</li>
             </ul>
-            <p>Google의 광고 정책 및 개인정보 처리 방법은 <a href="https://policies.google.com/technologies/ads" target="_blank" style="color:#ec4899;">Google 광고 정책</a>에서 확인할 수 있습니다. 이용자는 기기 설정의 "광고 ID 재설정/삭제"를 통해 맞춤형 광고를 제한할 수 있습니다.</p>
+            <p>이용자는 기기 설정의 "광고 ID 재설정/삭제"(Android) 또는 "추적 허용" 해제(iOS)를 통해 맞춤형 광고를 제한할 수 있습니다.</p>
+
+            <h4 style="margin-top:15px; font-size:15px; color:#333;">AdMob 광고 파트너</h4>
+            <p>AdMob은 Google이 승인한 제3자 광고 네트워크(예: Meta Audience Network, AppLovin, Unity Ads 등)를 통해 입찰·중개할 수 있습니다.</p>
+            <ul>
+                <li><a href="https://support.google.com/admob/answer/9012903" target="_blank" style="color:#ec4899;">Google 인증 광고 구매자 및 공급 파트너 목록</a></li>
+                <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" style="color:#ec4899;">Google 파트너 사이트 및 앱의 정보 수집 방법</a></li>
+                <li><a href="https://policies.google.com/technologies/ads" target="_blank" style="color:#ec4899;">Google 광고 정책</a></li>
+            </ul>
         </div>
 
         <div class="card">
@@ -159,11 +196,12 @@
         </div>
 
         <div class="card">
-            <h2>7. 계정 삭제 방법</h2>
-            <p>회원 탈퇴 및 계정 삭제는 다음과 같이 진행할 수 있습니다:</p>
+            <h2>7. 계정 삭제 방법 (Google Play 요구사항 준수)</h2>
+            <p>Google Play 「계정 삭제」 요구사항(<a href="https://support.google.com/googleplay/android-developer/answer/13327111" target="_blank" style="color:#ec4899;">공식 가이드</a>)에 따라 다음 경로로 계정과 데이터를 삭제할 수 있습니다:</p>
             <ul>
-                <li><strong>앱 내에서:</strong> 설정 > 계정 삭제 버튼 클릭</li>
-                <li><strong>이메일:</strong> pung0805@gmail.com으로 탈퇴 요청</li>
+                <li><strong>앱 내 삭제 (권장):</strong> 설정 > 계정 삭제 버튼 클릭 → 즉시 삭제</li>
+                <li><strong>웹 삭제 요청:</strong> <a href="delete-account.html" style="color:#ec4899;">계정 삭제 안내 페이지</a></li>
+                <li><strong>이메일 삭제 요청:</strong> <a href="mailto:pung0805@gmail.com" style="color:#ec4899;">pung0805@gmail.com</a> (영업일 기준 3일 이내 처리)</li>
             </ul>
             <p>계정 삭제 시 다음 데이터가 즉시 영구 삭제됩니다:</p>
             <ul>
